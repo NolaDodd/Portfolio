@@ -29,6 +29,39 @@
     margin-bottom: 10px;
     padding: 10px;
     }
+
+    header nav ul{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin:0;
+      padding:0;
+    }
+  
+    header nav ul li{
+      margin:0 10px;
+    }
+  
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 28px;
+      -webkit-text-stroke: 1.5px #0027a8;
+      text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff;
+    }
+    
+    h1 {
+    position: relative;
+    z-index: 0;
+    font-size: 80px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    -webkit-text-stroke: 2px #0027a8;
+      text-shadow: 3px 2px #20c0ff, 5px 4px #32066b, -1px -2px #a560ff
+    }
   
   .banner {
     position: relative;
@@ -40,7 +73,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    top:35px;
+    top:180px;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -66,19 +99,19 @@
     border-radius: 50%;
   }
 
-  .sun:hover {
-    border: 2px solid #ffd000;
-    border-radius: 50%;
-  }
-
   .moon {
     width: 30px;
     height: 30px;
     border-radius: 50%;
   }
 
+  .sun:hover {
+    border: 3px solid #ffd000;
+    border-radius: 50%;
+  }
+
   .moon:hover {
-    border: 2px solid #57b3ff;
+    border: 3px solid #57b3ff;
     border-radius: 50%;
   }
 
@@ -183,39 +216,6 @@
     overflow: hidden;
   }
 
-  header nav ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin:0;
-    padding:0;
-  }
-
-  header nav ul li{
-    margin:0 10px;
-  }
-
-  header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 28px;
-    -webkit-text-stroke: 1.5px #0027a8;
-    text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff;
-  }
-  
-  h1 {
-  position: relative;
-  z-index: 0;
-  font-size: 80px;
-  color: #ffffff;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  -webkit-text-stroke: 2px #0027a8;
-    text-shadow: 3px 2px #20c0ff, 5px 4px #32066b, -1px -2px #a560ff
-  }
-
   /* MAIN */
 
   h2 {
@@ -241,28 +241,10 @@
     color: #040c44;
     line-height: 1;
   }
-  
-  .headshot {
-    background-color: #8dd5ff;
-    border: 5px solid linear-gradient(50deg, #50a2ff, #287ff1, #3b69ff, #3026bb, #4b0088);
-    border-radius: 60%;
-  }
-
-  .image-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-radius: 60%;
-  }
-  
-  .image-container img {
-    max-width: 40%; 
-    height: auto; 
-  }
-  
+   
   div {
     margin: 0px;
-    padding: 10px;
+    padding: 4px;
   }
   
   article, section {
@@ -284,6 +266,70 @@
     color: #040c44
   }
 
+  /* MAIN CUSTOM CLASSES */
+  
+  .headshot {
+    position: relative;
+    overflow: hidden; /* Ensure gradient border stays within bounds */
+    width: 100%; /* Adjust size as needed */
+    height: 100%; /* Adjust size as needed */
+    border-radius: 50%; /* Ensure circular shape */
+    z-index: 2; /* Behind the image */
+  }
+  
+  
+  .headshot::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust to control the border width */
+    left: -10px; /* Adjust to control the border width */
+    right: -10px; /* Adjust to control the border width */
+    bottom: -10px; /* Adjust to control the border width */
+    z-index: -1; /* Behind the image */
+    background: linear-gradient(50deg, #50a2ff, #287ff1, #3b69ff, #3026bb, #4b0088);
+    border-radius: 50%; /* Ensure circular shape */
+  }
+  
+  
+  .image-container {
+    position: relative; /* Ensure z-index works */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    overflow: hidden; /* Hide overflow to contain gradient */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ensures image fills its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes default image whitespace */
+    border-radius: 50%; /* Ensure circular shape */
+  }
+  
+  
+
+
+/*   
+  .headshot {
+    border: 5px solid #0027a8;
+    border-radius: 50%;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 60%;
+  }
+  
+  .image-container img {
+    max-width: 80%;
+
+    height: auto; 
+  } */
+
   .tiny {
     font-size: 16px;
   }
@@ -300,6 +346,8 @@
 
   .center {
     justify-content: center;
+    align-items: center; 
+    text-align: center;
   }
 
   .space-evenly {
@@ -329,7 +377,6 @@
 
   .carddark {
     background: #03082e;
-    
   }
 
    @media all and (max-width: 770px) {   
@@ -342,20 +389,23 @@
       margin:0;
       padding:0;
     }
-
+    .sunmoonicons{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top:350px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   } 
 
   @media all and (max-width: 991px) {   
     .flex {
       display: flex;
-      flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
-      justify-content: space-evenly; /* Distribute cards evenly */
+      flex-wrap: wrap;
+      justify-content: space-evenly;
     }    
-    .col-md-6 {
-      flex-basis: 50%; /* Two cards per row on medium screens */
-    }
-    .col-lg-3 {
-      flex-basis: 25%; /* Four cards per row on large screens */
-    }
   }
 
