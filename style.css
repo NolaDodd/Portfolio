@@ -214,6 +214,7 @@
     height: 100%;
     color: #ffff;
     overflow: hidden;
+    background: none;
   }
 
   /* MAIN */
@@ -257,7 +258,6 @@
     text-align: center;
   }
   
-  a:link {color: #ffffff;}
   a:hover {color: #00b7ff;}
   
 
@@ -270,50 +270,40 @@
   
   .headshot {
     position: relative;
-    overflow: hidden; /* Ensure gradient border stays within bounds */
-    width: 100%; /* Adjust size as needed */
-    height: 100%; /* Adjust size as needed */
-    border-radius: 50%; /* Ensure circular shape */
-    z-index: 2; /* Behind the image */
+    overflow: hidden; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    z-index: 2; 
   }
-  
-  
+    
   .headshot::before {
     content: '';
     position: absolute;
-    top: -10px; /* Adjust to control the border width */
-    left: -10px; /* Adjust to control the border width */
-    right: -10px; /* Adjust to control the border width */
-    bottom: -10px; /* Adjust to control the border width */
-    z-index: -1; /* Behind the image */
+    top: -10px;
+    left: -10px; 
+    right: -10px; 
+    bottom: -10px;
+    z-index: -1;
     background: linear-gradient(50deg, #50a2ff, #287ff1, #3b69ff, #3026bb, #4b0088);
-    border-radius: 50%; /* Ensure circular shape */
+    border-radius: 50%; 
   }
   
-  
   .image-container {
-    position: relative; /* Ensure z-index works */
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
-    overflow: hidden; /* Hide overflow to contain gradient */
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
   }
   
   .image-container img {
-    width: 100%; /* Ensures image fills its container */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes default image whitespace */
-    border-radius: 50%; /* Ensure circular shape */
-  }
-
-  .tiny {
-    font-size: 16px;
-  }
-
-  .flex {
-    display: flex;
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 50%; 
   }
 
   .icondiv {
@@ -322,26 +312,12 @@
     height: 100%;
   }
 
-  .center {
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-  }
-
-  .space-evenly {
-    justify-content: space-evenly;
-  }
-
   .icons {
     max-width: 8%; 
     max-height: 8%;
     width: auto; 
     height: auto; 
   } 
-
-  .space {
-    margin: 5px;
-  }
 
   .btn-outline-primary {
     width: 100%;
@@ -355,6 +331,28 @@
 
   .carddark {
     background: #03082e;
+  }
+
+  .tiny {
+    font-size: 16px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .space {
+    margin: 5px;
+  }
+
+  .center {
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .space-evenly {
+    justify-content: space-evenly;
   }
 
    @media all and (max-width: 770px) {   
