@@ -16,14 +16,6 @@
 <body class="container bodydark">
 
     <header>
-      <div class="sunmoonicons">
-        <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Light Mode"> 
-          <img class="sun" src="images/icons/sunicon.png" alt="sun button">
-        </button>
-        <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Dark Mode"> 
-          <img class="moon" src="images/icons/moonicon.png" alt="moon button">
-        </button>
-      </div>
       <div class= "module modulewrapdark">
         <div>
           <div>
@@ -37,15 +29,27 @@
               <h2><b>Software Engineer</b></h2>
             </div>
           </div>
-          <nav class="navitems">
+
+        <div class="row">
+          
+          <div class="sunicon col-1">
+            <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Light Mode"> 
+              <img class="sun" src="images/icons/sunicon.png" alt="sun button">
+            </button>
+          </div>
+          <nav class="navitems col-10">
             <ul>
-              <li><a href="#aboutme"><b>About Me</b></a></a>
+              <li><a href="#aboutme"><b>About Me</b></a></li>
               <li><a href="#projects"><b>Projects</b></a></li>
               <li><a href="#contact"><b>Contact</b></a></li>
             </ul>
           </nav>
+          <div class="moonicon col-1">
+            <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Dark Mode"> 
+              <img class="moon" src="images/icons/moonicon.png" alt="moon button">
+            </button>
+          </div>
         </div>
-      </div>
     </header>
     
     <main>
@@ -167,25 +171,21 @@
     
     <section id="contact" class="module modulewrapdark">
       <h3><b>CONTACT</b></h3>
-        <section>
           <div class="row">
-            <div class="row-4 flex">
               <div class="col">
                 <a class="btn btn-outline-primary text-primary" href="https://www.linkedin.com/in/noladodd/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
               </div>
               <div class="col">
                 <a class="btn btn-outline-primary text-primary" href="mailto:noladodd.code@gmail.com" target="_blank"> <i class="fa-regular fa-envelope"></i> Email</a>
               </div>
-            </div>
           </div>
-        </section>
       </section>
     
     <footer id="footer">
       <br/>
-      <div>
-      <a href="#">
-        <img style="width: 40px; opacity: 90%;" src="images/icons/up-arrow.png" alt="back to top arrow">
+      <div >
+      <a  href="#">
+        <img style="width: 40px; opacity:90%;" src="images/icons/up-arrow.png" alt="back to top arrow">
       </a>
       </div>
       <br/>

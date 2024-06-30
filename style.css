@@ -44,7 +44,7 @@
     }
   
     header nav ul li{
-      margin:0 0px;
+      margin:0 10px;
     }
   
     header nav ul li a {
@@ -54,7 +54,7 @@
       font-size: 28px;
       -webkit-text-stroke: 1.5px #0027a8;
       text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff;
-      padding: 10px 10px;
+      z-index: 10
     }
     
     h1 {
@@ -85,15 +85,28 @@
     overflow: hidden;
   }
 
-  .sunmoonicons{
+  .sunicon{
     margin: 0;
     padding: 0;
     position: relative;
-    top: 200px;
+    top: 10px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .moonicon{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
     z-index: 3;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   .sunmoonbuttons {
@@ -360,6 +373,8 @@
     justify-content: space-evenly;
   }
 
+/* MOBILE */
+
    @media all and (max-width: 770px) {   
 
     header nav ul{
@@ -370,15 +385,27 @@
       margin:0;
       padding:10px;
     }
-    .sunmoonicons{
+
+    .sunicon{
       margin: 0;
       padding: 0;
       position: relative;
-      top:385px;
       z-index: 3;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
+    }
+
+    .moonicon{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     .icons {
