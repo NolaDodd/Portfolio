@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="container bodylight">
+<body class="container bodydark">
 
     <header>
       <div class="sunmoonicons">
@@ -24,7 +24,7 @@
           <img class="moon" src="images/icons/moonicon.png" alt="moon button">
         </button>
       </div>
-      <div class= "module modulewrap">
+      <div class= "module modulewrapdark">
         <div>
           <div>
             <div class="video-container">
@@ -39,7 +39,7 @@
           </div>
           <nav class="navitems">
             <ul>
-              <li><a href="#aboutme"><b>About Me</b></a></li>
+              <li><a href="#aboutme"><b>About Me</b></a></a>
               <li><a href="#projects"><b>Projects</b></a></li>
               <li><a href="#contact"><b>Contact</b></a></li>
             </ul>
@@ -49,17 +49,17 @@
     </header>
     
     <main>
-    <section id="aboutme" class="module modulewrap">
+    <section id="aboutme" class="module modulewrapdark">
       <h3><b>ABOUT ME</b></h3>
         <div>
         <div class="flex center">
             <div class="image-container col-4"> 
-              <div class="headshot ">
+              <div class="headshot">
                 <img  src="images/NolaDodd-Headshot-sq.jpg" alt="Picture of Nola Dodd" /> 
               </div>
             </div>
-          <div class="col-8">
-            <p >Hey! I'm Nola and I'm a full-stack Javascript Software Engineer based in Los Angeles. 
+          <div class="col-lg-8">
+            <p>Hey! I'm Nola and I'm a full-stack Javascript Software Engineer based in Los Angeles. 
               With a background in education and entertainment, I love to build in a way that is both simple, creative, and user-friendly. 
               When I'm not coding, I love playing boardgames, baking, and doing voiceover!</p>
           </div>
@@ -98,16 +98,16 @@
     <br/>
     <br/>
     
-    <section id="projects" class="module modulewrap">
+    <section id="projects" class="module modulewrapdark">
       <h3><b>PROJECTS</b></h3>
       <div class="flex">
         <div class="row">
           <div class="row-md-6 row-lg-3">
-          <div class="card">
-            <img class="card-img-top" src="images/projects/RestaurantReservation.png" alt="restaurant reservation application image">
+          <div class="card bodydark border borderlight">
+            <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/RestaurantReservation.png" alt="restaurant reservation application image">
             <div class="card-body">
-              <p class="card-title"><b>Restaurant Reservation</b></p>
-              <p class="card-text">Full-stack Restaurant Reservation application.</p>
+              <p><b>Restaurant Reservation</b></p>
+              <p class="card-text">Full-stack Reservation app.</p>
               <div class="flex center">
                 <a href="https://restaurant-reservation-capstone-delta.vercel.app/" target="_blank" class="btn btn-outline-info space">Demo</a>
                 <a href="https://github.com/NolaDodd/Restaurant-Reservation-Capstone" target="_blank" class="btn btn-outline-info space">Github</a> 
@@ -117,10 +117,10 @@
           </div>
         </div>
         <div class="row-md-6 row-lg-3">
-          <div class="card">
-            <img class="card-img-top" src="images/projects/WeLoveMovies.png" alt="we love movies application image">
-            <div class="card-body ">
-              <p class="card-title"><b>We Love Movies</b></p>
+          <div class="card bodydark border borderlight">
+            <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/WeLoveMovies.png" alt="we love movies application image">
+            <div class="card-body">
+              <p><b>We Love Movies</b></p>
               <p class="card-text">Full-stack Movie Theater Application.</p>
               <div class="flex center">
                 <a href="https://welovemovies-frontend-vux7.onrender.com/" target="_blank" class="btn btn-outline-info space">Demo</a>
@@ -133,10 +133,10 @@
     
       <div class="row">
       <div class="row-md-6 row-lg-3 ">
-        <div class="card">
-          <img class="card-img-top" src="images/projects/Grubdash.png" alt="grubdash application image">
+        <div class="card bodydark border borderlight">
+          <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/Grubdash.png" alt="grubdash application image">
           <div class="card-body">
-            <p class="card-title"><b>Grubdash</b></p>
+            <p><b>Grubdash</b></p>
             <p class="card-text">Full-stack Food ordering app</p>
             <div class="flex center">
               <a href="https://grubdash-frontend-gs3y.onrender.com/" target="_blank" class="btn btn-outline-info space">Demo</a>
@@ -146,10 +146,10 @@
         </div>
       </div>
       <div class="row-md-6 row-lg-3">
-        <div class="card">
-          <img class="card-img-top" src="images/projects/DecoderRing.png" alt="decoder ring application image">
+        <div class="card bodydark border borderlight">
+          <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/DecoderRing.png" alt="decoder ring application image">
           <div class="card-body">
-            <p class="card-title"><b>Decoder Ring</b></p>
+            <p><b>Decoder Ring</b></p>
             <p class="card-text">Message Decoder application</p>
             <div class="flex center">
               <a href="https://noladodd.github.io/Decoder-Ring/" target="_blank" class="btn btn-outline-info space">Demo</a>
@@ -165,7 +165,7 @@
     <br/>
     <br/>
     
-    <section id="contact" class="module modulewrap">
+    <section id="contact" class="module modulewrapdark">
       <h3><b>CONTACT</b></h3>
         <section>
           <div class="row">
@@ -183,7 +183,12 @@
     
     <footer id="footer">
       <br/>
-        <p><i><span style="opacity: 30%;">@NolaDodd</span></i></p>
+      <div>
+      <a href="#">
+        <img style="width: 40px; opacity: 90%;" src="images/icons/up-arrow.png" alt="back to top arrow">
+      </a>
+      </div>
+      <br/>
     </footer>
     
     <script src="index.js"></script>
