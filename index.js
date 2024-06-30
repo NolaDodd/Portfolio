@@ -13,8 +13,7 @@
         module.classList.add("modulewrap")
         module.classList.remove("modulewrapdark") 
     })
-  
-    
+   
     const pSelect = document.querySelectorAll("p")
     pSelect.forEach(p => {
         p.style.color = "#040c44"

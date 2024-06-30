@@ -5,12 +5,17 @@
     width: 100%;
   } 
  
+  :root {
+    --transition-duration: 0.5s
+  }
+
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     text-align: center;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
   } 
 
   .bodylight {
