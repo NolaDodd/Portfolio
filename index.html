@@ -3,7 +3,7 @@
 
 <head>
     <title>Nola Dodd - Portfolio</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="container bodydark">
+<body class="bodydark">
 
     <header>
       <div class= "module modulewrapdark">
@@ -24,32 +24,39 @@
                 <source src="images/StarfallBGshort.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="text-content">
-              <h1><b>NOLA DODD</b></h1>
-              <h2><b>Software Engineer</b></h2>
+            <div class="text-content row">
+              <nav class="flex">
+                <div class="title col-3">
+                  <h1><b>NOLA DODD</b></h1>
+                  <h2><b>Software Engineer</b></h2>
+                </div>
+                <ul class="col-8">
+                  <li><a href="#aboutme"><b>About Me</b></a></li>
+                  <li><a href="#projects"><b>Projects</b></a></li>
+                  <li><a href="#contact"><b>Contact</b></a></li>
+                </ul>
+            <div class="col-1 flex">
+              
+              <div class="sunicon">
+                <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Light Mode"> 
+                  <img class="sun" src="images/icons/sunicon.png" alt="sun button">
+                </button>
+              </div>
+
+              <div class="moonicon">
+                <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Dark Mode"> 
+                  <img class="moon" src="images/icons/moonicon.png" alt="moon button">
+                </button>
+              </div>
+            </div>
+
+            </nav>   
+
+
             </div>
           </div>
 
-        <div class="row">
-          
-          <div class="sunicon col-1">
-            <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Light Mode"> 
-              <img class="sun" src="images/icons/sunicon.png" alt="sun button">
-            </button>
-          </div>
-          <nav class="navitems col-10">
-            <ul>
-              <li><a href="#aboutme"><b>About Me</b></a></li>
-              <li><a href="#projects"><b>Projects</b></a></li>
-              <li><a href="#contact"><b>Contact</b></a></li>
-            </ul>
-          </nav>
-          <div class="moonicon col-1">
-            <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Dark Mode"> 
-              <img class="moon" src="images/icons/moonicon.png" alt="moon button">
-            </button>
-          </div>
-        </div>
+
     </header>
     
     <main>
