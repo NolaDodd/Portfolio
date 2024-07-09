@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
  html {
     height: 100%;
@@ -6,16 +7,17 @@
   } 
  
   :root {
-    --transition-duration: 0.5s
+    --transition-duration: 1.5s
   }
 
   body {
-    margin: 0;
+    max-width: 100%;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     text-align: center;
     transition: background-color var(--transition-duration), color var(--transition-duration);
+    overflow-x: hidden
   } 
 
   .bodylight {
@@ -24,6 +26,22 @@
 
   .bodydark {
     background: #03082e;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+    animation:fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -250px;
+  }
+
+  .show {
+    opacity: 1;
+    transition: opacity var(--transition-duration);
+    animation:fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -250px; 
   }
 
   /* HEADER */
@@ -36,6 +54,8 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 4px;
+    max-width: 100%;
+    overflow-x: hidden;
 
     div {
       padding: 0px;
@@ -46,34 +66,30 @@
           justify-content: center;
           align-items: center;
           list-style: none;
-          margin:0;
-          padding:0;
+          margin:0px;
+          padding:0px;
         }
-
-      nav ul li {
-        margin:0 10px;
-      }
     
       nav ul li a {
         color: #ffffff;
+        margin: 0px 8px;
         text-decoration: none;
-        margin: 10px;
         font-size: 28px;
         -webkit-text-stroke: 1.5px #0027a8;
-        text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff;
+        text-shadow: 1px 1px #20c0ff, 2px 2px #32066b, -1px -1px #a560ff;
         z-index: 10
       }
         
       h1 {
       position: relative;
       z-index: 0;
-      font-size: 44px;
+      font-size: 38px;
       color: #ffffff;
       padding: 0;
       margin: 0;
       line-height: 1;
       -webkit-text-stroke: 2px #0027a8;
-        text-shadow: 3px 2px #20c0ff, 5px 4px #32066b, -1px -2px #a560ff
+        text-shadow: 1px 1px #20c0ff, 3px 3px #32066b, -1px -2px #a560ff
       }
   
       h2 {
@@ -83,7 +99,7 @@
         margin: 0;
         line-height: 1;
         -webkit-text-stroke: 1.5px #0027a8;
-        text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff
+        text-shadow: 1px 1px #20c0ff, 2px 2px #32066b, -1px -1px #a560ff
       }
       
       .banner {
@@ -95,72 +111,53 @@
       .sunicon{
         margin: 0;
         padding: 0;
-        position: relative;
         z-index: 3;
         display: flex;
         align-items: center;
+        justify-content: center;
       }
     
       .moonicon{
         margin: 0;
         padding: 0;
-        position: relative;
         z-index: 3;
         display: flex;
         align-items: center;
+        justify-content: center;
       }
     
       .sunmoonbuttons {
         background: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
       }
     
       .sunmoonbuttons img {
-        width: 100%;
-        max-width: 50px;
-        min-width: 40px;
-        height: auto; 
-        display: block;
+        width: 40px;
       }
     
       .sun {
         border-radius: 50%;
+        transition: .3s ease;
       }
     
       .moon {
         border-radius: 50%;
+        transition: .3s ease;
       }
     
       .sun:hover {
-        border: 4px solid #ffd900;
+        border: 2px solid #ffd900;
         border-radius: 50%;
+        scale: 1.2;
       }
     
       .moon:hover {
-        border: 4px solid #00aeff;
+        border: 2px solid #00aeff;
         border-radius: 50%;
-      }
-    
-      .video-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        overflow: hidden;
-      }
-      
-      .video-container video {
-        width: 100%; 
-        height: 100%;
-        object-fit: cover; 
-        overflow: hidden; 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        scale: 1.2
       }
 
       .headermodulewrap {
@@ -181,7 +178,7 @@
       }
     
       .text-content {
-        mix-blend-mode:lighten;
+        mix-blend-mode: lighten;
         z-index: 2;
         display: flex;
         background: linear-gradient(50deg, #50a2ff, #287ff1, #3b69ff, #3026bb, #4b0088);
@@ -202,12 +199,16 @@
     position: relative;
     background: #f9fbfd; 
     transition: background-color var(--transition-duration), color var(--transition-duration);
+    max-width: 100%;
+
   }
 
   .modulewrapdark {
     position: relative;
     background: #03082e;
     transition: background-color var(--transition-duration), color var(--transition-duration);
+    max-width: 100%;
+
   }
 
   .modulewrapdark::before {
@@ -231,19 +232,51 @@
   main {
     background-size: cover;
     background-position: center;
-    margin-bottom: 10px;
-    padding: 10px;
+    }
+
+    .video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+    
+    .video-container video {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+      overflow: hidden; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h4 {
+      -webkit-text-stroke: 1px #171aa7;
+      font-size: 60px;
+      background: linear-gradient(150deg, #b9ebff, #76b1ff, #4595ff, #8338c9, #3b0199);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
   h3 {
-    color: #ffffff;
+    /* color: #ffffff;
     -webkit-text-stroke: 1.5px #0027a8;
-    text-shadow: 2px 1px #20c0ff, 3px 2px #32066b, -1px -1px #a560ff;
+    text-shadow: 2px 1px #20c0ff, 1px 1px #32066b, -1px -1px #a560ff;
     font-size: 46px;
     text-align: center; 
     line-height: 30px;
-    margin: 10px;
-    padding: 8px;
+    padding: 60px; */
+      -webkit-text-stroke: 1px #171aa7;
+      font-size: 56px;
+      background: linear-gradient(150deg, #b9ebff, #76b1ff, #4595ff, #8338c9, #3b0199);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
   }
 
   p {
@@ -255,14 +288,12 @@
   article, section {
     padding: 10px;
     font-size: 20px;
-  }
-
-  a {
-    font-size: 16px;
-    text-align: center;
+    margin: 5%;
   }
   
-  a:hover {color: #00b7ff;}
+  a:hover {
+    color: #d3f2ff;
+  }
   
 
   li {
@@ -271,6 +302,24 @@
   }
 
   /* MAIN CUSTOM CLASSES */
+
+  .hello {
+    font-size: 40px;
+    text-align: left; 
+    margin: 40px;
+    padding: 8px;
+    color: #ffffff;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+    mix-blend-mode: lighten;
+  }    
+
+  .margin {
+    margin: 10px
+  }
+
+  .cursive {
+    font-family: "Dancing Script";
+  }
   
   .headshot {
     position: relative;
@@ -279,9 +328,14 @@
     height: 100%; 
     border-radius: 50%; 
     z-index: 2; 
-    padding: 4px;
+    padding: 6px;
+    transition: .3s ease;
   }
     
+  .headshot:hover {
+    scale: 1.1
+  }
+
   .headshot::before {
     content: '';
     position: absolute;
@@ -295,13 +349,13 @@
   }
   
   .image-container {
+    margin: 10px;
     position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px; 
     height: 200px; 
-    overflow: hidden; 
   }
   
   .image-container img {
@@ -309,6 +363,7 @@
     height: auto; 
     display: block; 
     border-radius: 50%; 
+    
   }
 
   .icondiv {
@@ -383,7 +438,6 @@
       flex-direction: column;
       list-style: none;
       margin:0;
-      padding:10px;
     }
 
     .sunicon{
@@ -391,19 +445,25 @@
       padding: 0;
       position: relative;
       z-index: 3;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sunmoonbuttons {
+      background: none;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-
+    
     .moonicon{
       margin: 0;
       padding: 0;
       position: relative;
       z-index: 3;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -416,12 +476,13 @@
     } 
   } 
 
-  @media all and (max-width: 991px) {   
+  @media all and (max-width: 927px) {   
     .flex {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-    }    
+    }
+
     .icons {
       max-width: 10%; 
       max-height: 10%;
@@ -431,6 +492,12 @@
 
     .mobileflex {
       display: flex;
+    }
+  }
+
+  @media(prefers-reduced-motion){
+    .hidden {
+      transition: none;
     }
   }
 

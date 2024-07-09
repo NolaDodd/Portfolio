@@ -16,7 +16,7 @@
 <body class="bodydark">
 
     <header>
-      <div class= "module modulewrapdark">
+      <div class="hidden module modulewrapdark">
         <div>
           <div>
             <div class="video-container">
@@ -30,21 +30,21 @@
                   <h1><b>NOLA DODD</b></h1>
                   <h2><b>Software Engineer</b></h2>
                 </div>
-                <ul class="col-8">
-                  <li><a href="#aboutme"><b>About Me</b></a></li>
+                <ul class="col-7">
+                  <li><a href="#"><b>About Me</b></a></li>
                   <li><a href="#projects"><b>Projects</b></a></li>
                   <li><a href="#contact"><b>Contact</b></a></li>
                 </ul>
-            <div class="col-1 flex">
+            <div class="col-2 sunmoonbuttons">
               
               <div class="sunicon">
-                <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Light Mode"> 
+                <button type="button" class="btn" aria-label="Toggle Light Mode"> 
                   <img class="sun" src="images/icons/sunicon.png" alt="sun button">
                 </button>
               </div>
 
               <div class="moonicon">
-                <button type="button" class="btn sunmoonbuttons" aria-label="Toggle Dark Mode"> 
+                <button type="button" class="btn" aria-label="Toggle Dark Mode"> 
                   <img class="moon" src="images/icons/moonicon.png" alt="moon button">
                 </button>
               </div>
@@ -60,24 +60,25 @@
     </header>
     
     <main>
-    <section id="aboutme" class="module modulewrapdark">
-      <h3><b>ABOUT ME</b></h3>
-        <div>
-        <div class="flex center">
+
+    <section id="aboutme" class="hidden module modulewrapdark">
+      <h3 class="hidden"><b>ABOUT ME</b></h3>
+        <div class="hidden">
+        <div class="flex center hidden">
             <div class="image-container col-4"> 
               <div class="headshot">
                 <img  src="images/NolaDodd-Headshot-sq.jpg" alt="Picture of Nola Dodd" /> 
               </div>
             </div>
-          <div class="col-lg-8">
+          <div class="col-lg-7 margin">
             <p>Hey! I'm Nola and I'm a full-stack Javascript Software Engineer based in Los Angeles. 
               With a background in education and entertainment, I love to build in a way that is both simple, creative, and user-friendly. 
               When I'm not coding, I love playing boardgames, baking, and doing voiceover!</p>
           </div>
         </div>
-          <div>
+          <div class="hidden">
             <div class="row-4">  
-                <div class="icondiv center row-2">
+                <div class="icondiv center row-2 margin">
                   <img class = "icons" src="images/icons/html-2.png" alt="html" />
                   <img class = "icons" src="images/icons/cssicon.png" alt="css" />
                   <img class = "icons" src="images/icons/React-icon.png" alt="react" />
@@ -90,7 +91,7 @@
                 <p><b>Backend:</b> Node.js, Express, RESTful APIs, PostgreSQL</p>
                 <p><b>Tools:</b> Mocha, Chai, Jest, Knex, Git, GitHub, NPM, Visual Studio Code </p>
             </div>
-            <div class="row-4 flex">
+            <div class="row-4 flex margin">
               <div class="col">
                 <div>
                   <a class="btn btn-outline-primary" href="https://drive.google.com/file/d/1iCgdfHzjXSOJSGyOA9nBz_FzCqQCfJ3t/view" 
@@ -109,11 +110,11 @@
     <br/>
     <br/>
     
-    <section id="projects" class="module modulewrapdark">
-      <h3><b>PROJECTS</b></h3>
-      <div class="mobileflex">
+    <section id="projects" class=" hidden module modulewrapdark">
+      <h3 class="hidden"><b>PROJECTS</b></h3>
+      <div class="mobileflex hidden">
       <div class="flex row">
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-3 col-sm-6 ">
           <div class="card bodydark border borderlight">
             <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/RestaurantReservation.png" alt="restaurant reservation application image">
             <div class="card-body">
@@ -176,9 +177,9 @@
     <br/>
     <br/>
     
-    <section id="contact" class="module modulewrapdark">
-      <h3><b>CONTACT</b></h3>
-          <div class="row">
+    <section id="contact" class="hidden module modulewrapdark">
+      <h3 class="hidden"><b>CONTACT</b></h3>
+          <div class="row hidden">
               <div class="col">
                 <a class="btn btn-outline-primary text-primary" href="https://www.linkedin.com/in/noladodd/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
               </div>
@@ -187,7 +188,8 @@
               </div>
           </div>
       </section>
-    
+  </main>
+   
     <footer id="footer">
       <br/>
     </footer>
