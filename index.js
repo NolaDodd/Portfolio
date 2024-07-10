@@ -74,3 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Dark Mode");
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sunButton = document.querySelector('.sun');
+  const moonButton = document.querySelector('.moon');
+  
+  sunButton.addEventListener('click', function() {
+      sunButton.parentNode.style.display = 'none'; // Hide the current button
+      moonButton.parentNode.style.display = 'block'; // Show the other button
+      // Add logic to toggle light mode here
+  });
+
+  moonButton.addEventListener('click', function() {
+      moonButton.parentNode.style.display = 'none'; // Hide the current button
+      sunButton.parentNode.style.display = 'block'; // Show the other button
+      // Add logic to toggle dark mode here
+  });
+
+  moonButton.parentNode.style.display = 'none'; // Hide moon button initially
+});
