@@ -62,14 +62,6 @@
     padding: 0;
   }
 
-  .navbar a{
-    display: block;
-  }
-
-  .navbar.active{
-    display: block;
-  }
- 
   header {
     position: sticky;
     z-index: 100;
@@ -110,7 +102,7 @@
       }
         
       .navname {
-        font-size: 46px;
+        font-size: 38px;
         padding-left: 6px;
         text-align:start;
         background: linear-gradient(150deg, #b9ebff, #76b1ff, #4595ff, #6438c9, #3b0199);
@@ -544,8 +536,6 @@
       animation: cursor 1s infinite, typing 20s steps(14) infinite;
     }
 
-
-    
     .order-lg-2 {
         order: 1;
     }
@@ -578,6 +568,11 @@
     .mobileflex {
       display: flex;
     }
+
+        
+    .navname {
+      font-size: 38px;
+    }
   }
 
   @media all and (max-width: 780px) { 
@@ -587,31 +582,45 @@
       justify-content: flex-end;
       align-items: flex-end;
       font-size: 40px;
-    }
+      position: relative; /* Ensure it stays in the flow */
+      z-index: 300; /* Ensure it appears above the navbar */
+  }
 
-    navbar {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 50%;
-      background-color: rgba(0, 132, 255, 0.2);
+  .navbar {
+      position: fixed; /* Fix position to overlay content */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 132, 255, 0.3); /* Semi-transparent background */
       display: none;
-    }
+      z-index: 200; /* Ensure it appears above other content */
+      overflow-y: auto; /* Enable scrolling if needed */
+      padding: 20px; /* Adjust padding as needed */
+      box-sizing: border-box; /* Include padding in width calculation */
+  }
 
-    navbar a{
-      display: block;
-    }
+  .navbar.active {
+      display: flex;
+      flex-direction: column; /* Ensure items stack vertically */
+      justify-content: center; /* Center items vertically */
+      align-items: center; /* Center items horizontally */
+  }
 
-    navbar.active{
-      display: block;
-    }
+  .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center; /* Center items horizontally */
+  }
 
+  .navbar ul li {
+      margin-bottom: 10px;
+  }
     .image-container {
       flex-direction: column; 
       align-items: center;
   }
-    
-
 
     header nav ul{
       display: flex;
@@ -664,6 +673,9 @@
       font-size: 24px;
     }
     
+    .navname {
+      font-size: 32px;
+    }
   } 
 
 
