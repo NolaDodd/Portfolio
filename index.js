@@ -13,7 +13,8 @@ hiddenElements.forEach((el) => observer.observe(el))
   
 document.addEventListener("DOMContentLoaded", () => {
   const sunButton = document.querySelector(".sun");
-  
+  const moonButton = document.querySelector(".moon");
+
   sunButton.addEventListener("click", () => {
     // Change body background
     const body = document.querySelector("body");
@@ -42,7 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Light Mode");
   });
 
-  const moonButton = document.querySelector(".moon");
+  sunButton.addEventListener('click', function() {
+    sunButton.parentNode.style.display = 'none'; 
+    moonButton.parentNode.style.display = 'block'; 
+});
+
 
   moonButton.addEventListener("click", () => {
     // Change body background
@@ -75,22 +80,67 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+// Swap Sun and Moon on Click
 document.addEventListener('DOMContentLoaded', function() {
   const sunButton = document.querySelector('.sun');
   const moonButton = document.querySelector('.moon');
   
   sunButton.addEventListener('click', function() {
-      sunButton.parentNode.style.display = 'none'; // Hide the current button
-      moonButton.parentNode.style.display = 'block'; // Show the other button
-      // Add logic to toggle light mode here
+      sunButton.parentNode.style.display = 'none'; 
+      moonButton.parentNode.style.display = 'block'; 
   });
 
   moonButton.addEventListener('click', function() {
-      moonButton.parentNode.style.display = 'none'; // Hide the current button
-      sunButton.parentNode.style.display = 'block'; // Show the other button
-      // Add logic to toggle dark mode here
+      moonButton.parentNode.style.display = 'none'; 
+      sunButton.parentNode.style.display = 'block'; 
   });
 
-  moonButton.parentNode.style.display = 'none'; // Hide moon button initially
+  moonButton.parentNode.style.display = 'none'; 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const stableText = document.querySelector('.text-stable');
+  const animationText = document.querySelector('.text-animation');
+  const pauseButton = document.querySelector('.pause')
+  const playButton = document.querySelector('.play')
+  
+  pauseButton.addEventListener('click', function() {
+      animationText.parentNode.style.display = 'none'; 
+      stableText.parentNode.style.display = 'block';
+      playButton.parentNode.style.display = 'block'
+      pauseButton.parentNode.style.display = 'none' 
+  });
+
+  playButton.addEventListener('click', function() {
+      stableText.parentNode.style.display = 'none'; 
+      animationText.parentNode.style.display = 'block'; 
+      pauseButton.parentNode.style.display = 'block' 
+      playButton.parentNode.style.display = 'none'
+  });
+
+  pauseButton.parentNode.style.display = 'none'
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.getElementById('menuicon');
+  const navbar = document.querySelector('.navbar');
+
+  menuIcon.addEventListener('click', function() {
+      navbar.classList.toggle('active');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.getElementById('logo');
+
+  logo.addEventListener('click', function(event) {
+    event.preventDefault(); 
+
+    window.location.href = '/#';
+  });
+
+});
+
+

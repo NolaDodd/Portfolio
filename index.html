@@ -18,36 +18,37 @@
 
     <header>
       <div class="hidden modulewrap">
-        <i class='bx bx-menu flex' id="menuicon"></i>
-          <div>
-            <div class="row">
-              <nav class="flex">
-                <div class="col-3">
-                  <h1 class="navname"><b>NOLA DODD</b></h1>
-                </div>
-                <ul class="col-8 ">
-                  <li><a href="#">About Me</a></li>
+          <div class="row">
+            <div class="flex">
+              <div class="col-5 center">
+                <h1 class="navname" id="logo"><b>NOLA DODD</b></h1>
+              </div>
+
+              <div id="menuicon">
+                <i class='bx bx-menu flex' id="menuicon"></i>
+              </div>
+
+              <nav class="col-7 navbar">
+                <ul>
+                  <li><a href="#aboutme">About Me</a></li>
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
-            <div class="col-1 sunmoonbuttons">
-              
-              <div class="sunicon">
-                <button type="button" class="btn" aria-label="Toggle Light Mode"> 
-                  <img class="sun" src="images/icons/sunicon.png" alt="sun button">
-                </button>
-              </div>
-
-              <div class="moonicon">
-                <button type="button" class="btn" aria-label="Toggle Dark Mode"> 
-                  <img class="moon" src="images/icons/moonicon.png" alt="moon button">
-                </button>
-              </div>
+                <div class="sunmoonbuttons">
+                  <div class="sunicon">
+                    <button type="button" class="btn" aria-label="Toggle Light Mode"> 
+                      <img class="sun" src="images/icons/sunicon.png" alt="sun button">
+                    </button>
+                  </div>
+                  <div class="moonicon">
+                    <button type="button" class="btn" aria-label="Toggle Dark Mode"> 
+                      <img class="moon" src="images/icons/moonicon.png" alt="moon button">
+                    </button>
+                  </div>
+                </div>
+              </nav> 
             </div>
-            </nav>   
-            </div>
-          </div>
-
+        </div>
       </div>
     </header>
     
@@ -56,10 +57,29 @@
       <section id="title" class="hidden module modulewrapdark">
         <div class="container">
             <div class="row flex center space-evenly hidden">
-                <div class="col-md-6 order-md-1 intro">
+                <div class="col-sm-12 col-md-6 col-lg-7 order-md-1 order-lg-1 intro">
                     <h1 class="titlename">NOLA DODD</h1>
-                    <h2>Software Engineer</h2>
-                    <!-- <h2 class="text-animation"><span></span></h2> -->
+                    <div class="text-options">
+                    <div class-="col-sm-10 col-md-10 center">
+                      <div>
+                        <h2 id="text-stable" class="text-stable">Software Engineer</h2>
+                      </div>
+                      <div style="display: none">
+                        <h2 id ="text-animation" class="text-animation"><span></span></h2>
+                      </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2">
+                      <div>
+                        <button type="button" class="btn" aria-label="Toggle Pause">
+                          <i class='playpause pause bx bx-pause bx-border-circle bx-tada-hover'></i>
+                        </button>
+                        <button type="button" class="btn" aria-label="Toggle Play">
+                          <i class='playpause play bx bx-play bx-border-circle bx-tada-hover'></i>
+                        </button>     
+                      </div>
+                    </div>
+                    </div>
+
                     <div>
                       <p>Hey! I'm Nola and I'm a full-stack Software Engineer based in Los Angeles. </p>
                     </div>
@@ -68,15 +88,9 @@
                         <a href="https://github.com/NolaDodd" target="_blank"><i class='bx bxl-github bx-border-circle bx-tada-hover'></i></a>
                         <a href="mailto:noladodd.code@gmail.com" target="_blank"><i class='bx bx-envelope bx-border-circle bx-tada-hover'></i></a>
                         <a href="https://drive.google.com/file/d/1iCgdfHzjXSOJSGyOA9nBz_FzCqQCfJ3t/view" target="_blank"><i class='bx bxs-file-doc bx-border-circle bx-tada-hover'></i></a>
-                      <!-- <div>
-                      <button type="button" class="btn" aria-label="Toggle Pause">
-                        <i class='pause bx bx-pause bx-border-circle bx-tada-hover'></i>
-                      </button>
-                    </div> -->
-                      </div>
-
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-2 image-container">
+                <div class="row-sm-12 col-md-6 col-lg-5 order-md-2 order-lg-2 image-container">
                     <div class="headshot">
                         <img src="images/NolaDodd-Headshot-sq.jpg" alt="Picture of Nola Dodd" />
                     </div>
@@ -204,10 +218,10 @@
       <br />
           <div class="row hidden">
               <div class="col">
-                <a class="btn btn-outline-primary text-primary" href="https://www.linkedin.com/in/noladodd/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
+                <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/noladodd/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
               </div>
               <div class="col">
-                <a class="btn btn-outline-primary text-primary" href="mailto:noladodd.code@gmail.com" target="_blank"> <i class="fa-regular fa-envelope"></i> Email</a>
+                <a class="btn btn-outline-primary" href="mailto:noladodd.code@gmail.com" target="_blank"> <i class="fa-regular fa-envelope"></i> Email</a>
               </div>
           </div>
       </section>
