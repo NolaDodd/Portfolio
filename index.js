@@ -14,6 +14,8 @@ hiddenElements.forEach((el) => observer.observe(el))
 document.addEventListener("DOMContentLoaded", () => {
   const sunButton = document.querySelector(".sun");
   const moonButton = document.querySelector(".moon");
+  const textAnimationSpan = document.querySelector(".text-animation span");
+
 
   sunButton.addEventListener("click", () => {
     // Change body background
@@ -39,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.remove("border")
       card.classList.remove("border-light")
   })
+
+    textAnimationSpan.classList.add("light-mode");
+    textAnimationSpan.classList.remove("dark-mode");
 
     console.log("Light Mode");
   });
@@ -75,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
           card.classList.add("border")
           card.classList.add("border-light")
       })
+
+      textAnimationSpan.classList.add("dark-mode");
+      textAnimationSpan.classList.remove("light-mode");
 
     console.log("Dark Mode");
   });
