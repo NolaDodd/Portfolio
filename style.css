@@ -264,7 +264,7 @@
 
     .galaxy {
       background: url(images/galaxy2.png);
-      background-position: 250%;
+      background-position: 70% 50%;
       background-size: cover;
       -webkit-background-clip: text; 
     }
