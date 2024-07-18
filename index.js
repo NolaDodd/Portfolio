@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cardSelect.forEach(card => {
         card.classList.remove("border")
         card.classList.remove("border-light")
+        card.classList.remove("bodydark")
+        card.classList.add("bodylight")
     })
 
       textAnimationSpan.classList.add("light-mode");
@@ -72,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cardSelect.forEach(card => {
             card.classList.add("border")
             card.classList.add("border-light")
+            card.classList.remove("bodylight")
+            card.classList.add("bodydark")
         })
 
         textAnimationSpan.classList.add("dark-mode");
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //Swap Desktop Nav Sun and Moon on click 
+
 document.addEventListener('DOMContentLoaded', function() {
   const sunButton = document.querySelector('.sun');
   const moonButton = document.querySelector('.moon');

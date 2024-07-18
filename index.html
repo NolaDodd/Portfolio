@@ -37,7 +37,7 @@
                     </button>
                   </div>
                   <div class="moonicon">
-                    <button type="button" class="btn" aria-label="Toggle Dark Mode"> 
+                    <button type="button" style="display:none" class="btn" aria-label="Toggle Dark Mode"> 
                       <img class="moon" src="images/icons/moonicon.png" alt="moon button">
                     </button>
                   </div>
@@ -79,13 +79,13 @@
     </header>
 
     <main>
-      <section id="title" class="hidden module modulewrapdark">
+      <section id="title" class=" hidden module modulewrapdark">
         <div class="container">
             <div class="row flex center space-evenly hidden">
                 <div class="col-sm-12 col-md-6 col-lg-7 order-md-1 order-lg-1 intro">
                     <h1 class="titlename galaxy">NOLA DODD</h1>
                     <div class="text-options">
-                    <div class-="col-sm-10 col-md-10 center">
+                    <div class-="col-10 center">
                       <div>
                         <h2 id="text-stable" class="text-stable">Software Engineer</h2>
                       </div>
@@ -93,7 +93,7 @@
                         <h2 id ="text-animation" class="text-animation"><span></span></h2>
                       </div>
                     </div>
-                    <div class="col-sm-2 col-md-2">
+                    <div class="col-2">
                       <div>
                         <button type="button" class="btn" aria-label="Toggle Pause">
                           <i class='playpause pause bx bx-pause bx-border-circle bx-tada-hover'></i>
@@ -124,29 +124,29 @@
         </div>
     </section>
     
-    <section id="aboutme" class="hidden module modulewrapdark">
+    <section id="aboutme" class="bodydark2 hidden module modulewrapdark">
       <h3 class="hidden divider line glow"><b>ABOUT ME</b></h3>
       <br />
         <div class="hidden">
         <div class="flex center hidden">
           <div class="col-lg-8 margin">
-            <p>Hey! I'm Nola and I'm a full-stack Javascript Software Engineer based in Los Angeles. 
-              With a background of 8+ years of education and entertainment, I love to build in a way that is both simple, creative, and user-friendly. 
+            <p> With a background of 8+ years of education and entertainment, I love to build in a way that is both simple, creative, and user-friendly. 
               When I'm not coding, I love playing competitive boardgames, baking, and doing voiceover!</p>
           </div>
         </div>
           <div class="hidden">
             <div class="row-4">  
-                <div class="icondiv center row-2 margin">
-                  <img class = "icons" src="images/icons/html-2.png" alt="html" />
-                  <img class = "icons" src="images/icons/cssicon.png" alt="css" />
-                  <img class = "icons" src="images/icons/React-icon.png" alt="react" />
-                  <img class = "icons" src="images/icons/bootstrap.png" alt="bootstrap" /> 
-                  <img class = "icons" src="images/icons/nodejslogo.png" alt="node.js" />
-                  <img class = "icons" src="images/icons/postgresqlicon.png" alt="postgresql" />
+                <div class="techicons center row-2">
+                    <i class='bx bxl-javascript bx-border-circle bx-tada-hover'></i>
+                    <i class='bx bxl-html5 bx-border-circle bx-tada-hover'></i>
+                    <i class='bx bxl-css3 bx-border-circle bx-tada-hover' ></i> 
+                    <i class='bx bxl-bootstrap bx-border-circle bx-tada-hover' ></i>
+                    <i class='bx bxl-nodejs bx-border-circle bx-tada-hover' ></i>
+                    <i class='bx bxl-postgresql bx-border-circle bx-tada-hover' ></i>
+                    <i class='bx bxl-visual-studio bx-border-circle bx-tada-hover' ></i>
                 </div>
                 <br/>
-                <p><b>Frontend:</b> HTML, CSS, React, Bootstrap</p>
+                <p><b>Frontend:</b> Javascript, HTML, CSS, React, Bootstrap</p>
                 <p><b>Backend:</b> Node.js, Express, RESTful APIs, PostgreSQL</p>
                 <p><b>Tools:</b> Mocha, Chai, Jest, Knex, Git, GitHub, NPM, Visual Studio Code </p>
             </div>
@@ -171,10 +171,10 @@
     <section id="projects" class=" hidden module modulewrapdark">
       <h3 class="hidden divider line glow"><b>PROJECTS</b></h3>
       <br />
-      <div class="mobileflex hidden">
-      <div class="flex">
+      <div class="hidden">
+      <div class="flex center">
          
-        <div class=" col-lg-3 col-sm-6 ">
+        <div>
           <div class="card bodydark border borderlight">
             <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/RestaurantReservation.png" alt="restaurant reservation application image">
             <div class="card-body">
@@ -188,7 +188,7 @@
           </div>
         </div>
         
-        <div class="col-lg-3 col-sm-6">
+        <div>
           <div class="card bodydark border borderlight">
             <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/WeLoveMovies.png" alt="we love movies application image">
             <div class="card-body">
@@ -202,7 +202,7 @@
           </div>
         </div>
 
-      <div class="col-lg-3 col-sm-6">
+      <div>
         <div class="card bodydark border borderlight">
           <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/Grubdash.png" alt="grubdash application image">
           <div class="card-body">
@@ -216,7 +216,7 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-sm-6">
+      <div>
         <div class="card bodydark border borderlight">
           <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/DecoderRing.png" alt="decoder ring application image">
           <div class="card-body">

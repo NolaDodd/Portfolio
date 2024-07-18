@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
  html {
     height: 100%;
@@ -9,9 +10,9 @@
     --transition-duration: 1s ease;
     --transition-short: .3s ease;
     --bg-light: #f7f7f7;
-    --bg-light2: #c8e1ec;
-    --bg-dark: #070a29;
-    --bg-dark2: #0d0f3f;
+    --bg-light-g: linear-gradient(to bottom right,  #c1dcf7, #e8edf3, #cdddf1, #ddd2f8);
+    --bg-dark: #05092e;
+    --bg-dark-g: linear-gradient(to bottom right,  #170b42, #08083f, #161c5a, #12033d);
     --nav-color: #277dff;
     --softblue: #3450ec5b;
     --gradient: linear-gradient(150deg, #08b5fa, #79b1fc, #4595ff, #9068f0);
@@ -125,7 +126,8 @@
     max-width: 100%;
     overflow-x: hidden;
     backdrop-filter: blur(40px);
-    box-shadow: 0px 1px 0px 0px rgba(1, 0, 53, 0.144);
+    box-shadow: 0px 2px 3px 0px rgba(72, 89, 238, 0.267);
+
 
     div {
       padding: 0px;
@@ -250,8 +252,15 @@
     }
 
   .socialicons {
-    color: var(--bg-light);
+    color: var(--nav-color);
     font-size: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .techicons {
+    color: var(--nav-color);
+    font-size: 60px;
     display: flex;
     align-items: center;
   }
@@ -262,7 +271,6 @@
     align-items: center;
     font-size: 24px;
     -webkit-text-stroke: 1px #003cff85;
-
   }
 
     .titlename {
@@ -301,6 +309,7 @@
   p {
     color: #ffff;
     transition: background-color var(--transition-duration), color var(--transition-duration);
+    font-family: 'Lato', 'Poppin','Times New Roman', Times, serif;
   }
 
   article, section {
@@ -475,12 +484,6 @@
     border-radius: 50%;
   }
 
-  .icondiv {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-
   .icons {
     max-width: 8%; 
     max-height: 80px;
@@ -500,8 +503,8 @@
 
   .card {
     width:100%;
-    height:100%;
     max-width: 300px;
+    height: 460px;
     transition: background-color var(--transition-duration), color var(--transition-duration);
     transition: var(--transition-short);
     background: inherit; 
@@ -509,9 +512,18 @@
   }
 
 
-  .card:hover {
+  .card.bodydark:hover {
     scale: 1.1;
+    background: var(--bg-dark);
     box-shadow: 0 0 4px 4px #7a99ff49;
+    z-index: 200;
+  }
+
+  .card.bodylight:hover {
+    scale: 1.1;
+    background: var(--bg-light);
+    box-shadow: 0 0 4px 4px #7a99ff49;
+    z-index: 200;
   }
 
   .tiny {
@@ -520,6 +532,8 @@
 
   .flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .space {
@@ -621,11 +635,6 @@
         order: 2;
     }
 
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
     .icons {
       max-width: 10%; 
       max-height: 10%;
@@ -633,16 +642,16 @@
       height: auto; 
     }
 
-    .mobileflex {
-      display: flex;
-      justify-content: space-evenly;
-      margin: 2px;
-    }
 
     .navname {
       font-size: 38px;
       text-wrap: nowrap;
     }
+
+    .techicons {
+      font-size: 40px;
+    }
+
   }
 
   @media all and (max-width: 780px) { 
@@ -759,10 +768,33 @@
     h3 {
       font-size: 36px;
     }
+
+    .techicons {
+      font-size: 36px;
+    }
+
   } 
 
 
   @media all and (max-width: 420px) {
+
+    .card {
+      width:100%;
+      max-width: 300px;
+      height: 380px;
+    }
+
+    .text-animation {
+      font-size: 1.2em;
+    }
+
+    h2 {
+      font-size: 15px;
+    }
+
+    .playpause {
+      font-size: 18px;
+    }
 
     .mobilenav {
       flex-direction: column; 
@@ -771,7 +803,6 @@
 
     .mobilenav ul a {
       font-size: 18px;
-
     }
 
     .titlename {
@@ -785,8 +816,13 @@
     .image-container {
       max-width: 350px;
       min-width: 250px;
-
     }
+
+    .techicons {
+      font-size: 28px;
+    }
+
+
   }
 
 
