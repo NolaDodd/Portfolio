@@ -14,6 +14,7 @@
     --bg-dark: #05092e;
     --bg-dark-g: linear-gradient(to bottom right,  #170b42, #08083f, #161c5a, #12033d);
     --nav-color: #277dff;
+    --lb: #58b4ff;
     --softblue: #3450ec5b;
     --gradient: linear-gradient(150deg, #08b5fa, #79b1fc, #4595ff, #9068f0);
   }
@@ -252,14 +253,14 @@
     }
 
   .socialicons {
-    color: var(--nav-color);
+    color: var(--lb);
     font-size: 40px;
     display: flex;
     align-items: center;
   }
 
   .techicons {
-    color: var(--nav-color);
+    color:#58b4ff;
     font-size: 60px;
     display: flex;
     align-items: center;
