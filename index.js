@@ -21,10 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
   sunButton.forEach((sun) => {
     sun.addEventListener("click", () => {
 
+      const h4 = document.querySelector("h4")
+      h4.style.color= "#040c44"
+
       const body = document.querySelector("body");
       body.classList.add("bodylight")
       body.classList.remove("bodydark")
-      
+
       const moduleWraps = document.querySelectorAll(".module");
       moduleWraps.forEach(module => {
         module.classList.add("modulewrap")
@@ -54,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //to Dark Mode
   moonButton.forEach((moon) => {
     moon.addEventListener("click", () => {
+
+        const h4 = document.querySelector("h4")
+        h4.style.color = "#ffff"
+
         const body = document.querySelector("body")
 
         body.classList.add("bodydark")

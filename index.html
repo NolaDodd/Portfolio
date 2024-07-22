@@ -17,8 +17,8 @@
 <body class="bodydark">
 
     <header>
-      <div class="hidden modulewrap">
-          <div class="row">
+      <div class="hidden modulewrap ">
+          <div class="row ">
             <div class="flex space-between">
               <div class="col-xs-9 col-md-5 center">
                 <h1 class="navname" id="logo"><b>NOLA DODD</b></h1>
@@ -79,18 +79,18 @@
     </header>
 
     <main>
-      <section id="title" class=" hidden module modulewrapdark">
+      <section id="title" class="hidden module modulewrapdark">
         <div class="container">
             <div class="row flex center space-evenly hidden">
                 <div class="col-sm-12 col-md-6 col-lg-7 order-md-1 order-lg-1 intro">
-                    <h1 class="titlename galaxy">NOLA DODD</h1>
+                    <h1 class="titlename">NOLA DODD</h1>
                     <div class="text-options">
                     <div class-="col-10 center">
                       <div>
                         <h2 id="text-stable" class="text-stable">Software Engineer</h2>
                       </div>
-                      <div style="display: none">
-                        <h2 id ="text-animation" class="text-animation"><span></span></h2>
+                      <div class="text-animation-container" style="display: none">
+                        <h2 id ="text-animation" class="text-animation">Software Engineer</h2>
                       </div>
                     </div>
                     <div class="col-2">
@@ -106,13 +106,13 @@
                     </div>
 
                     <div>
-                      <p>Hey! I'm Nola and I'm a full-stack Software Engineer based in Los Angeles. </p>
+                      <h4> Hey! I'm Nola and I'm a full-stack Software Engineer based in Los Angeles. </h4>
                     </div>
-                    <div class="socialicons">
-                        <a href="https://www.linkedin.com/in/noladodd/" target="_blank"><i class='bx bxl-linkedin-square bx-border-circle bx-tada-hover'></i></a>
-                        <a href="https://github.com/NolaDodd" target="_blank"><i class='bx bxl-github bx-border-circle bx-tada-hover'></i></a>
-                        <a href="mailto:noladodd.code@gmail.com" target="_blank"><i class='bx bx-envelope bx-border-circle bx-tada-hover'></i></a>
-                        <a href="https://drive.google.com/file/d/1iCgdfHzjXSOJSGyOA9nBz_FzCqQCfJ3t/view" target="_blank"><i class='bx bxs-file-doc bx-border-circle bx-tada-hover'></i></a>
+                    <div>
+                        <a href="https://www.linkedin.com/in/noladodd/" target="_blank"><i class='socialicons bx bxl-linkedin-square bx-border-circle bx-tada-hover'></i></a>
+                        <a href="https://github.com/NolaDodd" target="_blank"><i class='socialicons bx bxl-github bx-border-circle bx-tada-hover'></i></a>
+                        <a href="mailto:noladodd.code@gmail.com" target="_blank"><i class='socialicons bx bx-envelope bx-border-circle bx-tada-hover'></i></a>
+                        <a href="https://drive.google.com/file/d/1iCgdfHzjXSOJSGyOA9nBz_FzCqQCfJ3t/view" target="_blank"><i class='socialicons bx bxs-file-doc bx-border-circle bx-tada-hover'></i></a>
                     </div>
                 </div>
                 <div class="row-sm-12 col-md-6 col-lg-5 order-md-2 order-lg-2 image-container">
@@ -124,7 +124,7 @@
         </div>
     </section>
     
-    <section id="aboutme" class="bodydark2 hidden module modulewrapdark">
+    <section id="aboutme" class="hidden module modulewrapdark">
       <h3 class="hidden divider line glow"><b>ABOUT ME</b></h3>
       <br />
         <div class="hidden">
@@ -136,14 +136,15 @@
         </div>
           <div class="hidden">
             <div class="row-4">  
-                <div class="techicons center row-2">
-                    <i class='bx bxl-javascript bx-border-circle bx-tada-hover'></i>
-                    <i class='bx bxl-html5 bx-border-circle bx-tada-hover'></i>
-                    <i class='bx bxl-css3 bx-border-circle bx-tada-hover' ></i> 
-                    <i class='bx bxl-bootstrap bx-border-circle bx-tada-hover' ></i>
-                    <i class='bx bxl-nodejs bx-border-circle bx-tada-hover' ></i>
-                    <i class='bx bxl-postgresql bx-border-circle bx-tada-hover' ></i>
-                    <i class='bx bxl-visual-studio bx-border-circle bx-tada-hover' ></i>
+                <div class=" center row-2">
+                    <i class='techicons bx bxl-javascript bx-border-circle bx-tada-hover'></i>
+                    <i class='techicons bx bxl-html5 bx-border-circle bx-tada-hover'></i>
+                    <i class='techicons bx bxl-css3 bx-border-circle bx-tada-hover' ></i> 
+                    <i class='techicons bx bxl-react bx-border-circle bx-tada-hover'></i>
+                    <i class='techicons bx bxl-bootstrap bx-border-circle bx-tada-hover' ></i>
+                    <i class='techicons bx bxl-nodejs bx-border-circle bx-tada-hover' ></i>
+                    <i class='techicons bx bxl-postgresql bx-border-circle bx-tada-hover' ></i>
+                    <i class='techicons bx bxl-visual-studio bx-border-circle bx-tada-hover' ></i>
                 </div>
                 <br/>
                 <p><b>Frontend:</b> Javascript, HTML, CSS, React, Bootstrap</p>
@@ -167,6 +168,7 @@
       </div>
     </section>
     <br/>
+    <br />
     
     <section id="projects" class=" hidden module modulewrapdark">
       <h3 class="hidden divider line glow"><b>PROJECTS</b></h3>
@@ -248,6 +250,10 @@
               </div>
           </div>
       </section>
+
+      <div class="overlay galaxytop2" >
+        <img id="galaxytop2" src="images/galaxytop2.png" alt="galaxy overlay">
+      </div>
   </main>
    
     <footer id="footer">
