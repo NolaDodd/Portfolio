@@ -376,7 +376,6 @@
   }
 
   .text-animation {
-    font-size: 1.8em;
     background-image: var(--gradient2);
     background-clip: text;
     color: transparent;
@@ -453,6 +452,7 @@
     width: 50%;
     height: 100%;
     min-width: 140px;
+    max-width: 300px;
   }
 
   .btn-outline-primary:hover, .btn-outline-info:hover {
@@ -544,10 +544,11 @@
     height: 40px;
     font-size: 1rem;
     box-shadow: none;
-    background-color: #578cff05;
+    background-color: #578cff0e;
     border-radius: 0;
     border-color:rgba(0, 132, 255, 0.9);
     border-style: none none solid none;
+    max-width: 900px;
   }
 
   .message {
@@ -817,10 +818,6 @@
       width:100%;
       max-width: 300px;
       height: 380px;
-    }
-
-    .text-animation {
-      font-size: 1.2em;
     }
 
     h2 {
