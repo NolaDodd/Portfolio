@@ -17,8 +17,8 @@
 <body class="bodydark">
 
     <header>
-      <div class="hidden modulewrap ">
-          <div class="row ">
+      <div class="hidden">
+          <div class="row">
             <div class="flex space-between">
               <div class="col-xs-9 col-md-5 center">
                 <h1 class="navname" id="logo"><b>NOLA DODD</b></h1>
@@ -79,12 +79,12 @@
     </header>
 
     <main>
-      <section id="title" class="hidden module modulewrapdark">
+      <section id="title" class="hidden">
         <div class="container">
             <div class="row flex center space-evenly hidden">
                 <div class="col-sm-12 col-md-6 col-lg-7 order-md-1 order-lg-1 intro">
                     <h1 class="titlename">NOLA DODD</h1>
-                    <div class="text-options">
+                    <div class="playpauseflex">
                     <div class-="col-10 center">
                       <div>
                         <h2 id="text-stable" class="text-stable">Software Engineer</h2>
@@ -117,18 +117,22 @@
                 </div>
                 <div class="row-sm-12 col-md-6 col-lg-5 order-md-2 order-lg-2 image-container">
                     <div class="headshot">
-                        <img src="images/NolaDodd-Headshot-sq.jpg" alt="Picture of Nola Dodd" />
+                        <img src="images/others/NolaDodd-Headshot-sq.jpg" alt="Picture of Nola Dodd" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="aboutme" class="hidden module modulewrapdark">
+
+    <section id="aboutme" class="hidden">
       <h3 class="hidden divider line glow"><b>ABOUT ME</b></h3>
       <br />
+      <div class="box">
+
+
+      
         <div class="hidden">
-        <div class="flex center hidden">
+        <div class="flex center hidden padding">
           <div class="col-lg-8 margin">
             <p> With a background of 8+ years of education and entertainment, I love to build in a way that is both simple, creative, and user-friendly. 
               When I'm not coding, I love playing competitive boardgames, baking, and doing voiceover!</p>
@@ -166,16 +170,15 @@
             </div>
           </div>
       </div>
+    </div>
     </section>
-    <br/>
-    <br />
     
-    <section id="projects" class=" hidden module modulewrapdark">
+    <section id="projects" class="hidden">
       <h3 class="hidden divider line glow"><b>PROJECTS</b></h3>
       <br />
+      <div class="box">
       <div class="hidden">
-      <div class="flex center">
-         
+      <div class="cardflex center">
         <div>
           <div class="card bodydark border borderlight">
             <img class="card-img-top p-2 border border-secondary-subtle" src="images/projects/RestaurantReservation.png" alt="restaurant reservation application image">
@@ -233,26 +236,59 @@
       </div>
       </div>
     </div>
-
-    </section>
+  </div>
+  </section>
     
-    <br/>
     
-    <section id="contact" class="hidden module modulewrapdark">
+    <section id="contact" class="hidden padding">
       <h3 class="hidden divider line glow"><b>CONTACT</b></h3>
       <br />
-          <div class="row hidden">
-              <div class="col">
-                <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/noladodd/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
+      <div class="box">
+          <div class="flex hidden">
+              <div>  
+                <a href="https://www.linkedin.com/in/noladodd/" target="_blank"><i class='socialicons bx bxl-linkedin-square bx-border-circle bx-tada-hover'></i></a>
               </div>
-              <div class="col">
-                <a class="btn btn-outline-primary" href="mailto:noladodd.code@gmail.com" target="_blank"> <i class="fa-regular fa-envelope"></i> Email</a>
+              <div>
+                <a href="https://github.com/NolaDodd" target="_blank"><i class='socialicons bx bxl-github bx-border-circle bx-tada-hover'></i></a>
+              </div>
+              <div >
+                <a href="mailto:noladodd.code@gmail.com" target="_blank"><i class='socialicons bx bx-envelope bx-border-circle bx-tada-hover'></i></a>
               </div>
           </div>
+          <br>
+
+          <h4>Let's get in touch! I'd love to work with you.</h4>
+
+          <div>
+              <form action="https://api.web3forms.com/submit" method="POST" >
+                <input type="hidden" name="access_key" value="f9576c79-5732-4bf9-8d61-d48380a73fd7">
+                  <div>
+                    <label for="name"></label>
+                    <input class="formtext" type="text" id="name" name="name" placeholder="Name" tabindex="1" required>
+                  </div>
+                  <div >
+                    <label for="email"></label>
+                    <input class="formtext" type="email" id="email" name="email" placeholder="Email" tabindex="2" required>
+                  </div>
+             
+                  <div >
+                    <label for="subject"></label>
+                    <input id="subject" class="formtext" name="subject" placeholder="Subject" tabindex="3" required></input>
+                  </div>
+                  <div >
+                    <label for="message"></label>
+                    <textarea class="formtext message" id="message" name="message" placeholder="Message" tabindex="4" required></textarea>
+                  </div>
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+               
+                <button type="submit" value="Submit" class="btn btn-outline-primary" tabindex="5">Send</button>
+              </form>
+          </div>
+        </div>
       </section>
 
       <div class="overlay galaxytop2" >
-        <img id="galaxytop2" src="images/galaxytop2.png" alt="galaxy overlay">
+        <img id="galaxytop2" src="images/others/galaxytop2r.png" alt="galaxy overlay">
       </div>
   </main>
    

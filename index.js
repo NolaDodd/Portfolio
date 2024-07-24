@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   sunButton.forEach((sun) => {
     sun.addEventListener("click", () => {
 
-      const h4 = document.querySelector("h4")
-      h4.style.color= "#040c44"
+      const h4 = document.querySelectorAll("h4")
+      h4.forEach(h => {
+        h.style.color= "#040c44"
+      })
 
       const body = document.querySelector("body");
       body.classList.add("bodylight")
@@ -58,8 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
   moonButton.forEach((moon) => {
     moon.addEventListener("click", () => {
 
-        const h4 = document.querySelector("h4")
-        h4.style.color = "#ffff"
+        const h4 = document.querySelectorAll("h4")
+
+        h4.forEach(h => {
+          h.style.color= "#ffff"
+        })
 
         const body = document.querySelector("body")
 
@@ -182,3 +187,5 @@ document.addEventListener('DOMContentLoaded', function() {
   pauseButton.parentNode.style.display = 'none'
 
 });
+
+
