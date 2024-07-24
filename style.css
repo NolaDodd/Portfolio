@@ -32,6 +32,10 @@
     overflow-x: hidden;
   } 
 
+  .galaxytop2-mobile {
+    display: none; 
+  }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -663,6 +667,15 @@
   }
 
   @media all and (max-width: 780px) { 
+
+    .galaxytop2-desktop {
+      display: none; /* Hide desktop version on small screens */
+    }
+    .galaxytop2-mobile {
+      display: block; /* Show mobile version on small screens */
+    }
+
+
     #menuicon {
       color: var(--nav-color);
       display: flex;
