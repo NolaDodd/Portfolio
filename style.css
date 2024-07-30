@@ -364,6 +364,10 @@
     font-size: 20px;
   }
 
+  .mini-text {
+    font-size: 14px;
+  }
+
   li {
     list-style-type: none;
     color: #040c44
@@ -460,10 +464,8 @@
   }
 
   .card {
-    width:100%;
-    max-width: 300px;
-    max-height: 450px;
-    height: 460px;
+    width:300px;
+    height: 450px;
     transition: background-color var(--transition-duration), color var(--transition-duration);
     transition: var(--transition-short);
     margin: 6px;
@@ -818,10 +820,20 @@
       backdrop-filter: blur(100px);
     }
 
+    .box {
+      padding: 10px 16px;
+      box-shadow: 0 0 14px 4px rgba(86, 173, 255, 0.253);
+    }
+
     .card {
       width:100%;
-      max-width: 300px;
-      height: 380px;
+      height: 100%;
+      padding: 0px;
+      margin: 2px;
+    }
+
+    .formtext {
+      width: 75%;
     }
 
     h2 {
