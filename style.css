@@ -820,10 +820,10 @@
       backdrop-filter: blur(100px);
     }
 
-    .box {
+    /* .box {
       padding: 10px 16px;
       box-shadow: 0 0 14px 4px rgba(86, 173, 255, 0.253);
-    }
+    } */
 
     .card {
       width:100%;
