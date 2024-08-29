@@ -364,6 +364,10 @@
     font-size: 20px;
   }
 
+  .card-text {
+    font-size: 18px;
+  }
+
   .mini-text {
     font-size: 14px;
   }
