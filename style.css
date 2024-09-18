@@ -834,10 +834,6 @@
 
   @media all and (max-width: 420px) {
 
-    header {
-      backdrop-filter: blur(100px);
-    }
-
     /* .box {
       padding: 10px 16px;
       box-shadow: 0 0 14px 4px rgba(86, 173, 255, 0.253);
