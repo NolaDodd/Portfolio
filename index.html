@@ -26,7 +26,7 @@
           <div class="row">
             <div class="flex space-between">
               <div class="col-xs-9 col-md-5 center">
-                <h1 class="navname" id="logo"><b>NOLA DODD</b></h1>
+                <h1 class="navname" id="logo">NOLA DODD</h1>
               </div>
 
               <nav class="col-7 navbar">
@@ -160,16 +160,16 @@
                 <p><b>Backend:</b> Node.js, Express, RESTful APIs, PostgreSQL</p>
                 <p><b>Tools:</b> Mocha, Chai, Jest, Postman, DBeaver, Knex, Git, GitHub, NPM, Visual Studio Code </p>
             </div>
-            <div class="row-4 flex margin">
+            <div class="row-4 flex mt-5">
               <div class="col">
                 <div>
-                  <a class="btn btn-outline-primary" href="https://drive.google.com/file/d/1i-zw5TsJuzUvQ1YyHOW1pi4J-Lmg_fts/view?usp=sharing" 
+                  <a class="btn btn-outline-primary color-button" href="https://drive.google.com/file/d/1i-zw5TsJuzUvQ1YyHOW1pi4J-Lmg_fts/view?usp=sharing" 
                     target="_blank"><i class="fa-regular fa-file"></i> Resume </a>
                 </div>
               </div>
               <div class="col">
                 <div >
-                  <a class="btn btn-outline-primary" href="https://github.com/NolaDodd" target="_blank"> <i class="fa-brands fa-github"></i> GitHub</a>
+                  <a class="btn btn-outline-primary color-button" href="https://github.com/NolaDodd" target="_blank"> <i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
             </div>
@@ -302,8 +302,15 @@
                     <textarea class="formtext message" id="message" name="message" placeholder="Message" tabindex="4" required></textarea>
                   </div>
                   <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-               
-                <button type="submit" value="Submit" class="btn btn-outline-primary" tabindex="5">Send</button>
+                  <button 
+                  type="submit" 
+                  value="Submit"
+                  class="g-recaptcha btn btn-outline-primary color-button margin" 
+                      data-sitekey="6Le4CU4qAAAAACKPaTWQuvgown9y45vsUVVDangu" 
+                      data-callback='onSubmit' 
+                      data-action='submit'
+                      tabindex="5"
+                      >Submit</button>
               </form>
           </div>
         </div>
@@ -318,6 +325,12 @@
     </footer>
     
     <script src="index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+      }
+    </script>
     
     <noscript>Javascript is required to run this app.</noscript>
     </body>
