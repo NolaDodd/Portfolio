@@ -302,15 +302,18 @@
                     <textarea class="formtext message" id="message" name="message" placeholder="Message" tabindex="4" required></textarea>
                   </div>
                   <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                  <button 
+
+                  <!-- <button 
                   type="submit" 
                   value="Submit"
                   class="g-recaptcha btn btn-outline-primary color-button margin" 
-                      data-sitekey="6Le4CU4qAAAAACKPaTWQuvgown9y45vsUVVDangu" 
-                      data-callback= 'onSubmit' 
-                      data-action='submit'
-                      tabindex="5"
-                      >Submit</button>
+                  data-sitekey="6Le4CU4qAAAAACKPaTWQuvgown9y45vsUVVDangu" 
+                  data-callback= 'onSubmit' 
+                  data-action='submit'
+                  tabindex="5"
+                  >Submit</button> -->
+
+                      <button type="submit" value="Submit" class="btn btn-outline-primary color-button margin" tabindex="5">Send</button>
               </form>
           </div>
         </div>
@@ -325,12 +328,13 @@
     </footer>
     
     <script src="index.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function onSubmit(token) {
         document.getElementById("contact-form").submit();
       }
-    </script>
+    </script> -->
     
     <noscript>Javascript is required to run this app.</noscript>
     </body>
