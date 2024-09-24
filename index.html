@@ -282,7 +282,7 @@
           <h4>Let's get in touch! I'd love to work with you.</h4>
 
           <div>
-              <form action="https://api.web3forms.com/submit" method="POST" >
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" >
                 <input type="hidden" name="access_key" value="f9576c79-5732-4bf9-8d61-d48380a73fd7">
                   <div>
                     <label for="name"></label>
@@ -307,7 +307,7 @@
                   value="Submit"
                   class="g-recaptcha btn btn-outline-primary color-button margin" 
                       data-sitekey="6Le4CU4qAAAAACKPaTWQuvgown9y45vsUVVDangu" 
-                      data-callback='onSubmit' 
+                      data-callback= 'onSubmit' 
                       data-action='submit'
                       tabindex="5"
                       >Submit</button>
@@ -328,7 +328,7 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
       function onSubmit(token) {
-        document.getElementById("demo-form").submit();
+        document.getElementById("contact-form").submit();
       }
     </script>
     
