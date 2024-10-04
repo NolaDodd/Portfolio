@@ -23,8 +23,9 @@
   }
 
   .color-button {
-    color: #8fdfff !important
+    color: #3ca7ff !important
   }
+
 
   body {
     max-width: 100%;
@@ -40,8 +41,8 @@
     background-image: url('images/others/galaxytop2r.jpg');
     background-size: cover;
     background-position: center;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     height: 100vh;
   }
 
@@ -374,6 +375,12 @@
     transition: color var(--transition-duration);
   }
 
+  h5 {
+    font-size: 22px;
+    color: #ffffff;
+    transition: color var(--transition-duration);
+  }
+
   p {
     color: #ffff;
     transition:  color var(--transition-duration);
@@ -481,7 +488,7 @@
   }
 
   .btn-outline-primary:hover, .btn-outline-info:hover {
-    color: white;
+    color: #3ca7ff;
     background-color: transparent;
     border-color: var(--icon-color);
     box-shadow: 0 0 4px 4px rgba(0, 132, 255, 0.9);
@@ -640,6 +647,10 @@
     font-size: 22px;
   }
 
+  h5 {
+    font-size: 20px;
+  }
+
   .text-animation {
     font-size: 28px;
     text-wrap: nowrap;
@@ -705,8 +716,8 @@
       background-image: url('images/others/galaxytop2r.jpg');
       background-size: cover;
       background-position: center;
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%);
       height: 100vh;
     }
 
@@ -836,6 +847,10 @@
   h4 {
     -webkit-text-stroke: .3px #171aa7;
     font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
   }
 
   .techicons {

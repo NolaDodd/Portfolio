@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
         h.style.color= "#040c44"
       })
 
+      const h5 = document.querySelectorAll("h5")
+      h5.forEach(h => {
+        h.style.color= "#4bb7ff"
+      })
+
       const body = document.querySelector("body");
       body.classList.add("bodylight")
       body.classList.remove("bodydark")
@@ -63,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const h4 = document.querySelectorAll("h4")
 
         h4.forEach(h => {
+          h.style.color= "#ffff"
+        })
+
+        
+        const h5 = document.querySelectorAll("h5")
+        h5.forEach(h => {
           h.style.color= "#ffff"
         })
 
